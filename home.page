@@ -1,0 +1,38 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="santander no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="santander no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="santander no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="santander no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title><%= title %></title>
+ 
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+	<script type="text/javascript" src="/templates/santander/js/jquery-2.1.3.min.js" ></script>
+	
+</head>
+<!--
+	home_page
+	home.page
+-->
+<body>
+	<div>
+		<% render :link => 'button_link', :text_editable => false, :link_attributes => { :id => "launch-button" } do %>
+			<img class="button-up" src="/templates/santander/images/button-up.png" />
+			<img class="button-down" src="/templates/santander/images/button-down.png" style="display:none;" />
+		<% end %>
+	</div>
+</body>
+
+<script type="text/javascript">
+	$("#launch-button").on("touchstart", function(){
+		$(".button-down").show();
+		$('.button-up').hide();
+		window.location.hash = "changed";
+	});
+</script
+
+</html>
