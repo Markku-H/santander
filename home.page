@@ -20,7 +20,7 @@
 -->
 <body>
 	<div>
-		<% render :link => 'button_link', :text_editable => false, :link_attributes => { :id => "launch-button" } do %>
+		<%= render :link => 'button_link', :text_editable => false, :link_attributes => { :id => "launch-button" } do %>
 			<img class="button-up" src="/templates/santander/images/button-up.png" />
 			<img class="button-down" src="/templates/santander/images/button-down.png" style="display:none;" />
 		<% end %>
