@@ -37,8 +37,8 @@
     dimensionValue = Agent.nickName(); // device name read
     
     // append target url with device name -parameter
-    var target_url = $("#launch-button").attr('href');
-    target_url.concat('?device=', dimensionValue);
+    var original_url = $("#launch-button").attr('href');
+    var target_url = original_url.concat('?device=', dimensionValue);
 
 	$("#launch-button").on("touchstart", function(){
 		$(".button-down").show();
