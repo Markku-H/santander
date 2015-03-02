@@ -28,7 +28,7 @@
 			<img class="button-down" src="/templates/santander/images/button-down.png" style="display:none;" />
 		<% end %>
 	</div>
-</body>
+
 
 <script type="text/javascript">
 
@@ -63,4 +63,5 @@
     
 </script>
 
+</body>
 </html>
