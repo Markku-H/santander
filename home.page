@@ -30,7 +30,7 @@
 	$("#launch-button").on("touchstart", function(){
 		$(".button-down").show();
 		$('.button-up').hide();
-		window.location.hash = "changed";
+		window.location = $("#launch-button").attr('href');
 	});
 </script
 
