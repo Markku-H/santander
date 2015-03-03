@@ -16,7 +16,13 @@
     <!-- include agent.js to access Opensign device -->
 	<script src="http://localhost:8080/opensign/agent.js"></script>
     
-	
+	<style>
+        #laitenimi {
+            position:absolute;
+            bottom:10px;
+            color:black;
+        }
+    </style>
 </head>
 <!--
 	home_page
@@ -28,6 +34,7 @@
 			<img class="button-down" src="/templates/santander/images/button-down.png" style="display:none;" />
 		<% end %>
 	</div>
+    <p id="laitenimi">Device Name</p>
 
 
 <script type="text/javascript">
@@ -51,6 +58,8 @@
 			  /* */	
 				
 			  ga('send', 'pageview');
+              
+              $("#laitenimi").text(dimensionValue);
 
 		  },3000)
     
