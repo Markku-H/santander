@@ -18,9 +18,12 @@
     
 	<style>
         #laitenimi {
-            position:absolute;
-            bottom:10px;
+            position:fixed;
+            top:20px;
+            left:20px;
             color:black;
+            font-size:10px;
+            z-index-10000;
         }
     </style>
 </head>
@@ -34,7 +37,7 @@
 			<img class="button-down" src="/templates/santander/images/button-down.png" style="display:none;" />
 		<% end %>
 	</div>
-    <p id="laitenimi">Device Name</p>
+    <div id="laitenimi">Device Name</div>
 
 
 <script type="text/javascript">
