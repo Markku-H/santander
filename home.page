@@ -23,7 +23,7 @@
             left:20px;
             color:black;
             font-size:10px;
-            z-index-10000;
+            z-index:1000;
         }
     </style>
 </head>
