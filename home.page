@@ -40,7 +40,41 @@
 
       ga('create', 'UA-60261375-1', 'auto');
       
-      var dimensionValue = 'noname'; // device name for analytics
+      
+      // Get Device screen name
+      // If nickname is not returned on 1st attempt, try again
+      
+      var nicknameFallbacks = 5;
+      
+      function getNickname(){
+
+          'use strict';
+
+          var nickname = null;
+
+          nicknameFallbacks--;
+
+          if( typeof Agent !== 'undefined' ){
+            nickname = Agent.nickName();
+
+            if( typeof nickname === 'string' && nickname !== '' ){
+              ga('set', 'dimension1', nickname);
+            }
+            else {
+              if( nicknameFallbacks < 1 ){ return; }
+              setTimeout( getNickname, 250 );
+            }
+          }
+        }
+        setTimeout( getNickname, 150 );
+      
+      
+      
+      ga('send', 'pageview');
+      
+      
+      
+  /*    var dimensionValue = 'noname'; // device name for analytics
 
     setTimeout(function(){
 
@@ -51,7 +85,14 @@
 				
 			  ga('send', 'pageview');
 
-		  },3000)
+		  },3000)  */
+          
+          
+          
+          
+          
+          
+          
     
     // append target url with device name -parameter
     var original_url = $("#launch-button").attr('href');
