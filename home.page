@@ -16,6 +16,15 @@
     <!-- include agent.js to access Opensign device -->
 	<script src="http://localhost:8080/opensign/agent.js"></script>
     
+    <style>
+        #statustext {
+            position:absolute;
+            display:inline-block;
+            bottom:50px;
+            left:50px;
+        }
+    </style>
+    
 </head>
 <!--
 	home_page
@@ -26,6 +35,7 @@
 			<img class="button-up" src="/templates/santander/images/button-up.png" />
 			<img class="button-down" src="/templates/santander/images/button-down.png" style="display:none;" />
 		<% end %>
+        <div id="statustext">Device Nickname</div>
 	</div>
 
 
@@ -89,7 +99,11 @@
           
           
           
-          
+     setTimeout(function(){
+        var teksti1= "Device Neme = " + nickname;
+        $("#statustext").text(teksti1);
+        
+     },5000)
           
           
           
