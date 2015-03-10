@@ -11,7 +11,7 @@
  
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 
-	<script type="text/javascript" src="/templates/allinone/js/jquery-2.1.3.min.js" ></script>
+	<script type="text/javascript" src="/templates/allin1/js/jquery-2.1.3.min.js" ></script>
     
     <!-- include agent.js to access Opensign device -->
 	<script src="http://localhost:8080/opensign/agent.js"></script>
@@ -34,8 +34,8 @@
 <body style="margin:0; padding: 0;">
 	<div>
 		<%= render :link => 'button_link', :text_editable => false, :link_attributes => { :id => "launch-button" } do %>
-			<img class="button-up" src="/templates/allinone/images/button-up.png" />
-			<img class="button-down" src="/templates/allinone/images/button-down.png" style="display:none;" />
+			<img class="button-up" src="/templates/allin1/images/button-up.png" />
+			<img class="button-down" src="/templates/allin1/images/button-down.png" style="display:none;" />
 		<% end %>
         <div id="statustext">Device Nickname</div>
 	</div>
