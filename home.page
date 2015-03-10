@@ -20,8 +20,10 @@
         #statustext {
             position:absolute;
             display:inline-block;
-            bottom:50px;
-            left:50px;
+            bottom:30px;
+            left:30px;
+            font-size:8px;
+            color:black;
         }
     </style>
     
