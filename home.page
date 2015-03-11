@@ -70,7 +70,10 @@
             nickname = Agent.nickName();
 
             if( typeof nickname === 'string' && nickname !== '' ){
+              var teksti1= "Device Neme = " + nickname;
+              $("#statustext").text(teksti1);
               ga('set', 'dimension1', nickname);
+              ga('send', 'pageview');
             }
             else {
               if( nicknameFallbacks < 1 ){ return; }
@@ -80,46 +83,10 @@
         }
         setTimeout( getNickname, 150 );
       
-      
-      
-      ga('send', 'pageview');
-      
-      
-      
-  /*    var dimensionValue = 'noname'; // device name for analytics
-
-    setTimeout(function(){
-
-		dimensionValue = Agent.nickName();
-	
-			  ga('set', 'dimension1', dimensionValue);
-			  /* */	
-				
-			  ga('send', 'pageview');
-
-		  },3000)  */
-          
-          
-          
-     setTimeout(function(){
-        var teksti1= "Device Neme = " + nickname;
-        $("#statustext").text(teksti1);
-        
-     },5000)
-          
-          
-          
-    
-    // append target url with device name -parameter
- 
- /* var original_url = $("#launch-button").attr('href');
-    var target_url = original_url.concat('?device=', dimensionValue);
-    */
 
 	$("#launch-button").on("touchstart", function(){
 		$(".button-down").show();
 		$('.button-up').hide();
-		//window.location = $("#launch-button").attr('target_url');
         window.location = $("#launch-button").attr('href');
         
         // send click event to analytics
