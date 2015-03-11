@@ -16,16 +16,6 @@
     <!-- include agent.js to access Opensign device -->
 	<script src="http://localhost:8080/opensign/agent.js"></script>
     
-    <style>
-        #statustext {
-            position:absolute;
-            display:inline-block;
-            bottom:30px;
-            left:30px;
-            font-size:8px;
-            color:black;
-        }
-    </style>
     
 </head>
 <!--
@@ -37,7 +27,6 @@
 			<img class="button-up" src="/templates/allin1/images/button-up.png" />
 			<img class="button-down" src="/templates/allin1/images/button-down.png" style="display:none;" />
 		<% end %>
-        <div id="statustext">Device Nickname</div>
 	</div>
 
 
@@ -70,8 +59,6 @@
             nickname = Agent.nickName();
 
             if( typeof nickname === 'string' && nickname !== '' ){
-              var teksti1= "Device Neme = " + nickname;
-              $("#statustext").text(teksti1);
               ga('set', 'dimension1', nickname);
               ga('send', 'pageview');
             }
